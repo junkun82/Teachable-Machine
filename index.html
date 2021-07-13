@@ -59,15 +59,15 @@
           const prediction = await model.predict(webcam.canvas);
           if(prediction[0].probability.toFixed(2)>=0.90){
             labelContainer.childNodes[0].innerHTML = "주먹";
-            document.write("<img src = \"바위.jpg\">");
+            // document.write("<img src = \"바위.jpg\">");
           }
           else if (prediction[1].probability.toFixed(2)>=0.90) {
             labelContainer.childNodes[0].innerHTML = "가위";
-            document.write("<img src = \"가위.jpg\">");
+            // document.write("<img src = \"가위.jpg\">");
           }
           else if (prediction[2].probability.toFixed(2)>=0.90) {
             labelContainer.childNodes[0].innerHTML = "보";
-            document.write("<img src = \"보.jpg\">");
+            // document.write("<img src = \"보.jpg\">");
           }
           else {
             labelContainer.childNodes[0].innerHTML = "가위,바위,보 중 하나를 내세요.";
